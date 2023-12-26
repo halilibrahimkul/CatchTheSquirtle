@@ -15,7 +15,7 @@ BLACK = (0, 0, 0)
 
 # Oyun penceresi oluştur
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Catch the Turtle")
+pygame.display.set_caption("Catch The Squirtle")
 
 # Kaplumbağa boyutları
 TURTLE_SIZE = 50
@@ -35,7 +35,7 @@ score_increment = 2  # Her doğru tıklama için kazanılan puan
 penalty = 1  # Her yanlış tıklama için kaybedilen puan
 
 # Kaplumbağa resmini yükle
-turtle_image = pygame.image.load("turtle.png")
+turtle_image = pygame.image.load("squirtle.png")
 
 # Oyun döngüsü
 while True:
@@ -53,13 +53,13 @@ while True:
                 score += score_increment
                 print("Doğru tıklama! Puan: ", score)
                 # Doğru tıklama durumunda uyarı
-                pygame.display.set_caption("Catch the Turtle - Doğru tıklama!")
+                pygame.display.set_caption("Catch The Squirtle - Doğru tıklama!")
             else:
                 # Yanlış tıklama durumunda puanı azalt
                 score -= penalty
                 print("Yanlış tıklama! Puan: ", score)
                 # Yanlış tıklama durumunda uyarı
-                pygame.display.set_caption("Catch the Turtle - Yanlış tıklama!")
+                pygame.display.set_caption("Catch The Squirtle - Yanlış tıklama!")
 
     current_time = time.time()
     elapsed_time = current_time - start_time
